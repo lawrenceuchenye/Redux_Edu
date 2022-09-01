@@ -6,14 +6,16 @@ import Posts from "../components/Posts"
 import PostForm from "../components/PostForm"
 import { Provider } from "react-redux"
 import { store } from "./redux_utils"
+//import  { connect } from "react-redux"
+//import fetchPost from "../pages/redux_utils/actions/postactions"
 
 /*import { createStore,applyMiddleware } from "redux"*/
 
-export default function Home({data}){
+const Home=({data})=>{
   //  const store=createStore(()=>[],{},applyMiddleware());
 
     return(
-     <Provider store={store}>
+    
         <div>
           <div className="header">
                <h1>Posts</h1>
@@ -22,7 +24,6 @@ export default function Home({data}){
              <hr />
              <Posts data={data}/>
           </div>
-        </Provider>
     );
 }
 
@@ -36,3 +37,5 @@ export const getServerSideProps=async ()=>{
       }
   }
 
+
+export default Home;
