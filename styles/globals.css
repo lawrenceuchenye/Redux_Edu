@@ -30,10 +30,54 @@ a {
   box-shadow:0 0 15px rgba(0,0,0,0.3);
   padding:10px;
   border-radius:3px;
+  transition:0.3s;
 }
 
 .post h1{
-    font-size:18px;
+    font-size:16px;
+}
+
+.post:hover{
+    transform:scale(1.05);
+}
+
+hr{
+    margin:20px auto;
+    width:80%;
+}
+
+.post_form{
+    display:flex;
+    justify-content:left;
+    margin:20px 10px;
+    width:auto;
+}
+
+.post_form form div{
+    margin-top:20px;
+}
+
+.post_form form div input,.post_form form div textarea{
+    width:300px;
+    padding:8px 7px;
+    margin-top:10px;
+    outline:none;
+}
+
+.post_form form div b{
+    text-transform:uppercase;
+    margin-top:25px;
+}
+
+.post_form button{
+    padding:8px 12px;
+    background:#000;
+    color:#fff;
+    font-size:23px;
+    width:120px;
+    border:none;
+    border-radius:3px;
+    margin-top:10px;
 }
 
 @media (prefers-color-scheme: dark) {
