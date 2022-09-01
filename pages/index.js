@@ -5,10 +5,12 @@ import styles from '../styles/Home.module.css'
 import Posts from "../components/Posts"
 import PostForm from "../components/PostForm"
 import { Provider } from "react-redux"
-import { createStore,applyMiddleware } from "redux"
+import { store } from "./redux_utils"
+
+/*import { createStore,applyMiddleware } from "redux"*/
 
 export default function Home({data}){
-    const store=createStore(()=>[],{},applyMiddleware());
+  //  const store=createStore(()=>[],{},applyMiddleware());
 
     return(
      <Provider store={store}>
