@@ -1,5 +1,3 @@
-import { createStore } from "redux"
-
 ///Action increment
 /*
   it just descibes what the function want's to dk
@@ -34,11 +32,5 @@ const reducer=(state=0,action)=>{
     }
 }
 
+export default reducer;
 
-let store=createStore(reducer);
-console.log(store);
-store.subscribe(()=>console.log(store.getState()));
-
-store.dispatch(increment());
-
-export default store;

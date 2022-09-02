@@ -1,21 +1,16 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-
+import { useEffect } from "react"
 import Posts from "../components/Posts"
 import PostForm from "../components/PostForm"
 import { Provider } from "react-redux"
-import { store } from "./redux_utils"
-//import  { connect } from "react-redux"
-//import fetchPost from "../pages/redux_utils/actions/postactions"
-
-/*import { createStore,applyMiddleware } from "redux"*/
+import  reducer  from "./redux_utils"
+import { createStore } from "redux"
 
 const Home=({data})=>{
-  //  const store=createStore(()=>[],{},applyMiddleware());
-
     return(
-    
+      <Provider store={createStore(reducer)}>
         <div>
           <div className="header">
                <h1>Posts</h1>
@@ -24,6 +19,7 @@ const Home=({data})=>{
              <hr />
              <Posts data={data}/>
           </div>
+        </Provider>
     );
 }
 
